@@ -1,0 +1,20 @@
+2016-08-01T21:06:38.124552337 0.306729s notice: Recursively removing directory /home/adan/working/bgeo_db/bgeo-server/app/rethinkdb_data/tmp
+2016-08-01T21:06:38.129886339 0.312065s notice: Initializing directory /home/adan/working/bgeo_db/bgeo-server/app/rethinkdb_data
+2016-08-01T21:06:38.130026305 0.312202s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/adan/working/bgeo_db/bgeo-server/app/rethinkdb_data' did not already exist or is empty.)
+2016-08-01T21:06:38.130062993 0.312239s notice: Running rethinkdb 2.3.4 (GCC 4.8.5)...
+2016-08-01T21:06:38.135497341 0.317676s notice: Running on Linux 4.1.27-27-default x86_64
+2016-08-01T21:06:38.135590582 0.317766s notice: Loading data from directory /home/adan/working/bgeo_db/bgeo-server/app/rethinkdb_data
+2016-08-01T21:06:38.160261206 0.342439s info: Automatically using cache size of 5191 MB
+2016-08-01T21:06:38.161098330 0.343274s notice: Listening for intracluster connections on port 29015
+2016-08-01T21:06:38.163730421 0.345906s notice: Listening for client driver connections on port 28015
+2016-08-01T21:06:38.163908036 0.346084s notice: Listening for administrative HTTP connections on port 8080
+2016-08-01T21:06:38.163911422 0.346087s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2016-08-01T21:06:38.163916428 0.346092s notice: Listening on driver addresses: 127.0.0.1, ::1
+2016-08-01T21:06:38.163918901 0.346094s notice: Listening on http addresses: 127.0.0.1, ::1
+2016-08-01T21:06:38.163923383 0.346099s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2016-08-01T21:06:38.163928245 0.346104s notice: Server ready, "linux_7ezf_fb3" fc0875d4-6517-4a28-bcbf-a0faee495e12
+2016-08-01T21:07:04.625235907 26.807413s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2016-08-01T21:07:04.625327699 26.807503s notice: Shutting down client connections...
+2016-08-01T21:07:04.625417431 26.807593s notice: All client connections closed.
+2016-08-01T21:07:04.625420441 26.807596s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2016-08-01T21:07:04.627936044 26.810112s notice: Storage engine shut down.

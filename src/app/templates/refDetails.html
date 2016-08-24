@@ -1,0 +1,15 @@
+<table class="table">
+  {% for r in refs|batch(3,'&nbsp;') %}
+  <tr>
+    {% for c in r %}  
+    <td>
+        {% if c != '&nbsp;' %}
+        <a href='#' tabindex='0' class='btn bref' data-bref='{{ c }}' data-title='{{ c }}' role='button'>{{ c }}</a>
+        {% else %}
+        {{ c }}
+        {% endif %}
+    </td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>

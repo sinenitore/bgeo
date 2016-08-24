@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="page-header">
+       <h1>bgeo: A mapping tool for biblical locations</h1>
+       <p class="lead">Enter a location in the search box below (autocompletion will help with the spelling if the location is known). The results will be displayed on the map and in the table. Click on the references in the table to list all the references for that location. Finalnly click on an individual reference to show the text of the verse.</p>
+    </div>
+    <div class="container-fluid theme-showcase" role="main">
+      <div class="row">
+        <div class="col-md-3">
+            <form class="form-horizontal">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <label for="txtLocName">Location</label>
+                    <input type="text" class="form-control" autocomplete="off" placeholder="Gerar" id="txtLocName">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <button type="button" class="btn btn-primary pull-right" id="btnLocSearch">Search</button>
+                  </div>
+                </div>
+            </form>
+            <div class="row">
+              <div class="col-sm-12">
+                <table id="tbl-results" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Location</th>
+                            <th>References</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                 <div id="divLocDetails">&nbsp;</div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+          <div id="mapid" height=200></div>
+        </div>
+     </div>
+  </div>
+<!--  <script type="text/javascript">
+    var refTagger = { 
+      settings: { 
+          bibleVersion: "KJV",
+          roundCorners: true,
+          socialSharing: [], 
+          tooltipStyle: "dark",
+          tagAutomatically: false,
+          convertHyperlinks: true
+      }   
+    }
+    (function(d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = "//api.reftagger.com/v2/RefTagger.js";
+        s.parentNode.insertBefore(g, s);
+    }(document, "script"));
+</script>-->
+  {% endblock %}
