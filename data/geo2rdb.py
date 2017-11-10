@@ -13,7 +13,9 @@ LOCTABLE = 'locations'
 REFTABLE = 'references'
 def get_db_conn():
     try:
+        print 'Attempting rdb connection.'
         connection = r.connect(config['rdb']['host'], config['rdb']['port'])
+        print 'Connection attempt completed successfully.'
     except RqlRuntimeError, e:
         print 'App database already exists. Run the app without --setup.'
         print e
@@ -218,6 +220,7 @@ if __name__ == "__main__":
     if args.run_setup:
         c = get_db_conn()
         if c:
+            r.db_drop(NEWDB).run(c)
             r.db_create(NEWDB).run(c)
             r.db(NEWDB).table_create(LOCTABLE).run(c)
             r.db(NEWDB).table_create(REFTABLE).run(c)

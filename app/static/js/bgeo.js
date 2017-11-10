@@ -61,7 +61,7 @@ function bgeo_main(){
       minLength: 2,
       limit: 10,
       source: function(query, process){
-        return $.get('http://192.168.168.254:5151/bgeo/api/v1.0/be/location/search?query=' + query, function(data){
+        return $.get('/bgeo/api/v1.0/be/location/search?query=' + query, function(data){
             return process(data.loc_names)}
         )}
   });
@@ -152,7 +152,7 @@ function results_to_table(data){
 function get_loc_by_name(){
   var lname = $('#txtLocName').val()
   console.log(lname)
-  var rurl = 'http://192.168.168.254:5151/bgeo/api/v1.0/location/by-name/'
+  var rurl = '/bgeo/api/v1.0/location/by-name/'
   var qurl = rurl.concat(lname)
   $.getJSON( qurl, function(data){
       if (data.rSize >= 0){
@@ -184,7 +184,7 @@ function get_loc_by_name(){
 }
 
 function get_refs_by_lid(lid){
-  var rurl = 'http://localhost:5151/bgeo/api/v1.0/references/by-locid/'
+  var rurl = '/bgeo/api/v1.0/references/by-locid/'
   var qurl = rurl.concat(lid)
   $.get(qurl, function(data){
      $('#divLocDetails').html(data)
@@ -269,7 +269,7 @@ var popOpts = {
     }
 }
 
-var bapi_url = 'http://192.168.168.254:5151/proxy/api/v1.0/bible-api/'
+var bapi_url = '/proxy/api/v1.0/bible-api/'
 var popTemplate = '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
 var bookChaps = [
     {book: 'Genesis', chapters: 50},

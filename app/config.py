@@ -4,7 +4,7 @@ config['mongo']['host'] = '172.17.0.72'
 config['mongo']['port'] = 27017
 
 config['rdb'] = {}
-config['rdb']['host'] = '172.17.0.2'
+config['rdb']['host'] = '127.0.0.1'
 config['rdb']['port'] = 28015
 
 refSort = {

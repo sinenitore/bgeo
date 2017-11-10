@@ -6,17 +6,21 @@ __pycache__/
 # C extensions
 *.so
 
+pip-selfcheck.json
 # Distribution / packaging
 .Python
 env/
+bin/
 build/
 develop-eggs/
 dist/
 downloads/
 eggs/
 .eggs/
+include/
 lib/
 lib64/
+local/
 parts/
 sdist/
 var/
